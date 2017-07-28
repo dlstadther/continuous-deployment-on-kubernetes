@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y \
     python3-dev \
     python3-pip
 
-RUN ln -s /usr/bin/python3.6 /usr/bin/python3
+RUN rm -f /usr/bin/python3 && ln -s /usr/bin/python3.6 /usr/bin/python3
 
 RUN pip3 install --upgrade \
     cryptography \
